@@ -1,0 +1,15 @@
+# config/config.yml
+
+defaults: &defaults
+  key: value
+  regexp: !ruby/regexp /pattern/
+
+development:
+  <<: *defaults
+  
+test:
+  <<: *defaults
+  
+production:
+  <<: *defaults
+  key: override value
