@@ -1,0 +1,25 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "5.2.1"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "phpmailer/phpmailer",
+                "version": "5.2.1",
+                "dist": {
+                    "url": "http://phpmailer.apache-extras.org.codespot.com/files/PHPMailer_5.2.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "vcs",
+            "url": "/path/to/local/repo"
+        }
+    ]
+    "autoload": {
+        "classmap": ["vendor/phpmailer/phpmailer"]
+    }
+}
