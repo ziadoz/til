@@ -1,0 +1,8 @@
+{
+    "require": {
+        "doctrine/dbal": "2.3.0",
+        "doctrine/migrations": "@dev",
+        "symfony/console": "2.1.2",
+        "symfony/yaml": "2.1.2"
+    }
+}

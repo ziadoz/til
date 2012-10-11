@@ -1,0 +1,4 @@
+name: Example Migrations
+migrations_namespace: ExampleMigrations
+table_name: migrations
+migrations_directory: /path/to/migrations/directory
