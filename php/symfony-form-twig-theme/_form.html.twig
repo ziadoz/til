@@ -1,0 +1,27 @@
+{# Form Theme #}
+{# See: https://github.com/symfony/symfony/blob/2.0/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig #}
+{# See: http://stackoverflow.com/questions/10043251/how-to-add-a-css-class-on-a-form-row-in-twig-template #}
+
+{% form_theme form _self %}
+
+{# Field Row #}
+{# - Add 'error' class to form widgets. #}
+{# - Display errors below widgets. #}
+{% block field_row %}
+{% spaceless %}
+    {% set attr = (errors|length > 0 ? attr|merge({ class: 'error' }) : attr) %}
+    {{ form_label(form, label|default(null)) }}
+    {{ form_widget(form, { attr: attr }) }}
+    {{ form_errors(form) }}
+{% endspaceless %}
+{% endblock field_row %}
+
+{# Field Errors #}
+{# - Display errors in paragraphs. #}
+{% block field_errors %}
+{% spaceless %}
+    {% for error in errors %}
+        <p class="error">{{ error.messageTemplate|trans(error.messageParameters, 'validators') }}</p>
+    {% endfor %}
+{% endspaceless %}
+{% endblock field_errors %}
