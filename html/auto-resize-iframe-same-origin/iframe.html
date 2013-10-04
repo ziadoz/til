@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>iFrame</title>
+</head>
+<body>
+    <!-- Page Content -->
+    
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+    // Resize Parent Window's Corresponding iFrame.
+    $(window).on('resize', function() {
+    	if (window.self != window.top) {
+            $(parent.document).find('iframe').each(function() {
+	        if (this.contentWindow.document == window.document) {
+                    $(this).css({ height: $('body').height() + 'px', width: '100%' });
+            	}
+            });
+    	}
+    });
+    </script>
+</body>
+</html>
