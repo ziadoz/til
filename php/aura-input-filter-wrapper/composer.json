@@ -1,0 +1,6 @@
+{
+    "require": {
+        "aura/input": "1.*",
+        "aura/filter": "1.*"
+    }
+}
