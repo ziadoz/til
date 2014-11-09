@@ -1,0 +1,27 @@
+{
+	"auto_close_tags": true,
+	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
+	"create_window_at_startup": false,
+	"font_face": "Menlo",
+	"font_size": 12,
+	"highlight_line": true,
+	"ignored_packages":
+	[
+		"Vintage",
+		"AlignTab"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": false,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": false,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"ensure_newline_at_eof_on_save": true,
+	"word_wrap": false,
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"detect_indentation": true,
+	"use_tab_stops": true
+}
