@@ -1,0 +1,30 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Box.
+  config.vm.box = "trusty64"
+  config.vm.network :private_network, ip: "192.168.33.100"
+
+  # Synched Folder.
+  synched_opts = { nfs: true }
+  nfs_exports = ["rw", "noac", "actimeo=0", "intr", "async", "insecure", "no_subtree_check", "noacl", "lookupcache=none"]
+
+  if (RUBY_PLATFORM =~ /darwin/)
+    nfs_exports << "maproot=0:0"
+    synched_opts[:bsd__nfs_options] = nfs_exports
+  elsif (RUBY_PLATFORM =~ /linux/)
+    nfs_exports << "no_root_squash"
+    synched_opts[:linux__nfs_options] = nfs_exports
+  end
+
+  config.vm.synced_folder "~/Projects", "/var/www/vhosts", synched_opts
+
+  # Provider.
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "example-box"
+    vb.memory = 512
+  end
+end
