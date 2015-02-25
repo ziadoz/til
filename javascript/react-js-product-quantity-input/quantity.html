@@ -1,0 +1,79 @@
+<!-- Demo: http://jsfiddle.net/o38gdsfd/6/ -->
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>React JS - Quantity Input</title>
+    <style>
+        .component-quantity-input {
+            display: block;
+        }
+
+        .component-quantity-input * {
+            display: inline-block;
+        }
+
+        .component-quantity-input input {
+            padding: 5px;
+            text-align: center;
+            width: 25px;
+        }
+
+        .component-quantity-input span {
+            margin-left: 8px;
+            margin-right: 8px;
+            background: silver; 
+            padding: 5px;
+            width: 15px;
+            text-align: center;
+            cursor: pointer;
+        }    
+    </style>
+</head>
+<body>
+    <div id="quantity"></div>
+
+    <script src="JSXTransformer.js"></script>
+    <script src="react-with-addons.js"></script>
+    <script type="text/jsx">
+        var QuantityInput = React.createClass({
+            getInitialState: function() {
+                return { quantity: 1 };
+            },
+            
+            handleIncrement: function(e) {
+                this.setState({ quantity: this.state.quantity + 1 });
+            },
+            
+            handleDecrement: function(e) {
+                if (this.state.quantity > 1) {
+                    this.setState({ quantity: this.state.quantity - 1 });    
+                }
+            },
+
+            handleChange: function(e) {
+                var value = e.target.value.replace(/[^0-9]/, '');
+                value = (value == '' ? 1 : value);
+                value = parseInt(value);
+
+                this.setState({ quantity: value });
+            },
+
+            render: function() {
+                return (
+                    <div className="component-quantity-input">
+                        <span onClick={this.handleDecrement}>-</span>
+                        <input type="text" value={this.state.quantity} onChange={this.handleChange} />
+                        <span onClick={this.handleIncrement}>+</span>
+                    </div>
+                );
+            }
+        });
+         
+        React.render(
+            <QuantityInput />, 
+            document.getElementById('quantity')
+        );
+    </script>
+</body>
+</html>
