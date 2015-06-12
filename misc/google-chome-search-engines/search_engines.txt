@@ -1,0 +1,9 @@
+Google Chrome Search Engines
+----------------------------
+Settings > Manage Search Engines
+
+DuckDuckGo Google (ddgg)
+https://duckduckgo.com/?q=!g+%s
+
+DuckDuckGo Similar (ddgs)
+https://duckduckgo.com/?q=similar+sites+to+%s
