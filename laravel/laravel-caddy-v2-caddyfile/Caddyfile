@@ -1,0 +1,6 @@
+example.com {
+    root * /var/www/vhosts/example.com/public
+    php_fastcgi unix//var/run/php/php7.4-fpm.sock
+    file_server
+    encode zstd gzip
+}
