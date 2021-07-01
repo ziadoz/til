@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    <!-- 
+    We have to use $refs because x-bind:checked updates the HTML not the prop. 
+    @see: https://github.com/alpinejs/alpine/issues/520 
+    -->
+    <div
+        x-data="{
+            toggle(checked) {
+                $refs.checkboxes
+                    .querySelectorAll('input[type=checkbox]')
+                    .forEach(c => c.checked = checked);
+            }
+        }"
+    >
+        <a href="#" @click.prevent="toggle(true)">All</a> | <a href="#" @click.prevent="toggle(false)">None</a>
+        <ul x-ref="checkboxes">
+            <li><label><input type="checkbox" value="a">A </label></li>
+            <li><label><input type="checkbox" value="b">B </label></li>
+            <li><label><input type="checkbox" value="c">C </label></li>
+            <li><label><input type="checkbox" value="d">D </label></li>
+            <li><label><input type="checkbox" value="e">E </label></li>
+            <li><label><input type="checkbox" value="f">F </label></li>
+        </ul>
+    </div>
+</body>
+</html>
