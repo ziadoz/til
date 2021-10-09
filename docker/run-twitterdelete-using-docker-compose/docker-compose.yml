@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  ruby:
+    image: ruby:3.0
+    working_dir: /usr/src/myapp
+    command: bash -c 'bundle install && ruby twitter_delete.rb --archive=twitter/data/tweet.js --user=<username> --days=7 --olds=99999 --rts=100 --favs=100 --force'
+    environment:
+      TWITTER_CONSUMER_KEY: xxx
+      TWITTER_CONSUMER_SECRET: xxx
+      TWITTER_ACCESS_TOKEN: xxx
+      TWITTER_ACCESS_TOKEN_SECRET: xxx
+    volumes:
+      - .:/usr/src/myapp
+    networks:
+      - default
