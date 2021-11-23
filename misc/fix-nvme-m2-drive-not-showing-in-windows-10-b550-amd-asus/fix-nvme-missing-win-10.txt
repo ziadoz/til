@@ -1,0 +1,22 @@
+The Issue
+=========
+
+I had an issue on my B550 AMD motherboard where my NVME M.2 (GEN3) drive would show up in the BIOS, but was missing in Windows 10 intermittently. For example, when I first boot the computer up, the drive isn't in Windows, but if I restart Windows the drive appears.
+
+I tried the solutions here, but none of them worked:
+
+- https://www.techpowerup.com/forums/threads/nvme-ssd-not-showing-up-in-windows-on-amd-system.264448/
+- https://linustechtips.com/topic/1063692-m2-ssd-showing-up-in-bios-but-not-in-windows-10/
+- https://forums.tomshardware.com/threads/m-2-ssd-recognized-but-not-showing-up.2604341/
+- https://www.reddit.com/r/buildapc/comments/h9j4qy/nvme_m2_ssd_only_detected_after_reboot/
+
+The last Reddit link above is the exact same NVME M.2 drive model as mine, a Western Digital SN550.
+
+The Fix
+=======
+
+You need to upgrade the firmware on your Western Digital NVME M.2 drive. You can do this by downloading the Western Digital Dashboard software: https://support.wdc.com/downloads.aspx?p=279
+
+Once in the software scan for drives, locate the NVME M.2 and hit the Update Firmware button.
+
+After this the drive should appear consistently in Windows 10. 🎉
