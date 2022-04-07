@@ -1,0 +1,30 @@
+<style>
+    ul.human-list {
+        list-style: none;
+    }
+
+    ul.human-list li {
+        display: inline-block;
+    }
+
+    ul.human-list li:not(:last-child):after {
+        content: ", "
+    }
+
+    ul.human-list li:last-child:before {
+        content: "& "
+    }
+
+    ul.human-list li:first-child:before {
+        content: "";
+    }
+</style>
+
+<ul>
+  <li>Apples</li>
+  <li>Bananas</li>
+  <li>Oranges</li>
+  <li>Pears</li>
+</ul>
+
+<ul><li>Apples</li></ul>
