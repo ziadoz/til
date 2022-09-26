@@ -1,0 +1,13 @@
+# Prevent Git managing line endings of CSV files, otherwise it changes CRLF to LF on commit and checkout.
+# This is useful if you're working with CSV files that come from legacy systems and have differing line endings.
+#
+# You can see view how Git manages line endings with this command: git ls-files --eol | grep .csv
+#
+# @see: https://git-scm.com/docs/gitattributes
+# @see: https://stackoverflow.com/questions/17628305/windows-git-warning-lf-will-be-replaced-by-crlf-is-that-warning-tail-backwar
+# @see: https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes
+# @see: https://stackoverflow.com/questions/20496084/git-status-ignore-line-endings-identical-files-windows-linux-environment
+# @see: https://stackoverflow.com/questions/21822650/disable-git-eol-conversions
+
+* text=auto
+*.csv text=false
