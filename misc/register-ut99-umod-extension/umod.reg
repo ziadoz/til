@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.umod]
+@="Unreal.Module"
+
+[HKEY_CLASSES_ROOT\Unreal.Module]
+@="Unreal Module"
+
+[HKEY_CLASSES_ROOT\Unreal.Module\DefaultIcon]
+@="D:\\Games\\Steam\\steamapps\\common\\Unreal Tournament\\Help\\Unreal.ico"
+
+[HKEY_CLASSES_ROOT\Unreal.Module\Shell]
+@="open"
+
+[HKEY_CLASSES_ROOT\Unreal.Module\Shell\open]
+@="&Install this Unreal module"
+
+[HKEY_CLASSES_ROOT\Unreal.Module\Shell\open\command]
+@="D:\\Games\\Steam\\steamapps\\common\\Unreal Tournament\\System\\Setup.exe install \"%1\""
