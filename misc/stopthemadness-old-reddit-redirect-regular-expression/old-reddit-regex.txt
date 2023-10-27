@@ -1,0 +1,13 @@
+Redirect from New Reddit to Old Reddit, but ignoring media links, which break and point to a Lady Gaga nice hat page.
+
+Links:
+https://old.reddit.com/r/bugs/comments/15p1ctt/why_does_clicking_any_image_on_reddit_open_the/
+https://github.com/tom-james-watson/old-reddit-redirect/blob/master/background.js
+https://underpassapp.com/StopTheMadness/support-chrome.html#redirects
+https://gist.github.com/msanders/52700d5c5ed76f1114594ddb862b530e
+
+Pattern:
+/^https?://www\.reddit\.com(?!/(?:(?:media|gallery|settings)\b|r/\w+/s/))([/#?].*)?$/
+
+Replacement:
+https://old.reddit.com$1/
