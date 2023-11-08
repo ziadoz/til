@@ -1,0 +1,9 @@
+In the middle of a Zoom call my audio in/out devices changed to “Microsoft Teams Audio Devices”, despite no longer having Microsoft Teams installed.
+
+It turns out Teams leaves its audio driver on your system running, and it occasionally decides to make itself the default. 
+
+I had to delete: /Library/Audio/Plug-Ins/HAL/MSTeamsAudioDevice.driver in the end to fix it:
+
+sudo rm -rf /Library/Audio/Plug-Ins/HAL/MSTeamsAudioDevice.driver
+
+https://forums.macrumors.com/threads/how-to-uninstall-core-audio-driver-msteamsaudiodevice-driver.2344450/
