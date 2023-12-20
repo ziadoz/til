@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    :root {
+      --commas-separator: ", ";
+      --commas-last-separator: " & ";
+    }
+
+    ul.commas,
+    ul.oxford-commas {
+      & {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+
+      li:after {
+        content: var(--commas-separator);
+      }
+
+      li:nth-last-child(2):after {
+        content: var(--commas-last-separator);
+      }
+
+      li:last-child:after {
+        content: ""
+      }
+    }
+
+    ul.oxford-commas {
+       li:nth-last-child(2):after {
+        content: var(--commas-separator) var(--commas-last-separator);
+      } 
+    }
+  </style>
+</head>
+<body>
+  <ul class="commas">
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+  </ul>
+
+  <ul class="commas">
+    <li>Apples</li>
+    <li>Bananas</li>
+  </ul>
+
+  <ul class="commas">
+    <li>Apples</li>
+  </ul>
+
+  <ul class="oxford-commas">
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+  </ul>
+</body>
+</html>
