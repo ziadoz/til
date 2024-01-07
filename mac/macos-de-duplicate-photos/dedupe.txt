@@ -1,0 +1,16 @@
+fdupes
+------
+
+https://superuser.com/questions/481456/finding-and-removing-duplicate-files-in-osx-with-a-script
+https://bbs.archlinux.org/viewtopic.php?id=265148
+https://askubuntu.com/questions/177346/how-to-delete-duplicate-files-with-fdupes
+https://superuser.com/questions/386199/how-to-remove-duplicated-files-in-a-directory/691551#691551
+
+fdupes -r /Volumes/files/Photos
+
+
+DupeGuru
+--------
+
+https://odd.blog/2016/09/29/find-duplicate-files-in-macos/
+https://dupeguru.voltaicideas.net/
