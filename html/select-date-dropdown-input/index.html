@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <style>
+    div.date-input:has(input:disabled) {
+      visibility: hidden;
+    }
+  </style>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectEl = document.querySelector('select[name="relative-date"]');
+      const dateEl = document.querySelector('input[name="exactdate"]');
+      dateEl.disabled = true;
+
+      ['load', 'change'].forEach((emit) => {
+        selectEl.addEventListener(emit, (event) => {
+          dateEl.disabled = (event.target.value !== 'Select Date');
+        });
+      });
+    });
+  </script>
+  
+  <div class="date-dropdown">
+    <select name="relative-date">
+      <option selected></option>
+      <option>Today</option>
+      <option>Select Date</option>
+    </select>
+  </div>
+  
+  <hr>
+  
+  <div class="date-input">
+    <label for="exactdate">Date</label>
+    <input type="date" name="exactdate" id="date" />
+  </div>
+</body>
+</html>
