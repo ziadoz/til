@@ -1,0 +1,15 @@
+<a href="#">I am a link.</a>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const a = document.querySelector('a');
+
+    ['load', 'click'].forEach((type) => {
+        a.addEventListener(type, (event) => {
+          event.preventDefault();
+          console.log(event.type);
+        });
+    });
+
+    a.dispatchEvent(new Event('load'));
+  });
+</script>
