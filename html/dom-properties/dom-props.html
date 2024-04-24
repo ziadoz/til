@@ -1,0 +1,21 @@
+<div id="app"></div>
+
+<script>
+    const option = document.createElement('option');
+    option.value = 'Foo Bar';
+
+    const datalist = document.createElement('datalist');
+    datalist.id = 'foo-bar';
+    datalist.appendChild(option);
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.list = 'foo-bar'; // Doesn't work...
+    input.setAttribute('list', 'foo-bar'); // Does work...
+
+    const app = document.getElementById('app');
+    app.appendChild(input);
+    app.appendChild(datalist);
+</script>
+
+<!-- https://jakearchibald.com/2024/attributes-vs-properties/ -->
