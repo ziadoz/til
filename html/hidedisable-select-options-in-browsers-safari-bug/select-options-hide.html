@@ -1,0 +1,23 @@
+<!-- Most browsers support "display: none;" on select options to hide them. -->
+<!-- However, Safari doesn't support this, and will still display the option. -->
+<!-- The solution is to "display: none;" and disable the option. -->
+<!-- The option will be hidden in most browsers, but still disabled in Safari. -->
+
+<select>
+    <option></option>
+    <option value="foo">Foo</option>
+    <option value="bar">Bar</option>
+    <option value="baz">Baz</option>
+    <option value="qux">Qux</option>
+</select>
+
+<script>
+    const hideOption = (option) => {
+        option.style = 'display: none';
+        option.disabled = true;
+    };
+
+    const select = document.querySelector('select');
+    hideOption(select.options[1]);
+    hideOption(select.options[2]);
+</script>
