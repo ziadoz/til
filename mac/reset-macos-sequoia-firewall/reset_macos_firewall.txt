@@ -1,0 +1,15 @@
+Disable the firewall:
+/usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
+
+Remove the firewall config (**doesn't work due to permissions**):
+sudo rm /usr/libexec/ApplicationFirewall/com.apple.alf.plist
+
+Or, backup the firewall config (**doesn't work due to permissions**):
+sudo mv /usr/libexec/ApplicationFirewall/com.apple.alf.plist /usr/libexec/ApplicationFirewall/com.apple.alf.plist.bak
+
+Enable the firewall:
+/usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+
+Links:
+https://forums.macrumors.com/threads/how-to-reset-firewall-which-is-blocking-remote-desktop.2361888/post-31546316
+https://github.com/osquery/osquery/pull/8352
