@@ -1,0 +1,9 @@
+https://www.postgresql.org/docs/current/datatype-numeric.html#DATATYPE-SERIAL
+https://www.postgresql.org/docs/current/sql-createindex.html
+https://www.postgresql.org/docs/current/datatype-json.html
+https://www.postgresql.org/docs/current/functions-json.html
+https://www.postgresql.org/docs/current/ltree.html
+https://notso.boringsql.com/posts/how-not-to-change-postgresql-column-type/
+https://patshaughnessy.net/2017/12/12/installing-the-postgres-ltree-extension
+https://pganalyze.com/blog/5mins-postgres-17-incremental-backups
+https://www.mydbops.com/blog/postgresql-17-incremental-backup-pg-basebackup-pg-combinebackup/
