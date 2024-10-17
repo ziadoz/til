@@ -1,0 +1,43 @@
+The Minimum Coins Problem is a classic problem in dynamic programming where the goal is to find the minimum number of coins needed to make a certain amount of money using a given set of coin denominations. Here's how you can solve it using dynamic programming:
+
+Problem Statement
+Given a set of coin denominations and a total amount, find the minimum number of coins needed to make that amount. If it is not possible to make that amount with the given denominations, return -1.
+
+Dynamic Programming Approach
+Define the Problem: Let dp[i] be the minimum number of coins needed to make the amount i.
+Initialization:
+Set dp[0] = 0 because no coins are needed to make the amount 0.
+Set dp[i] = ∞ for all other amounts i from 1 to the target amount, indicating that those amounts are initially unreachable.
+Recurrence Relation: For each coin in the denominations, update the dp array:
+For each amount i from the coin value to the target amount, update: dp[i]=min(dp[i],dp[i−coin]+1) This means that if we can make the amount i - coin, then we can make i by adding one more coin.
+Final Result: After filling the dp array, if dp[amount] is still ∞, return -1 (indicating that the amount cannot be formed). Otherwise, return dp[amount].
+Implementation
+Here is a Python implementation of the above approach:
+
+python
+
+Copy Code
+def min_coins(coins, amount):
+    # Initialize the dp array
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0  # Base case: 0 coins are needed to make amount 0
+
+    # Fill the dp array
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
+
+    # Check the result
+    return dp[amount] if dp[amount] != float('inf') else -1
+
+# Example usage
+coins = [1, 2, 5]
+amount = 11
+print(min_coins(coins, amount))  # Output: 3 (11 = 5 + 5 + 1)
+Explanation of the Example
+In the example above, with coin denominations of 1, 2, and 5, to make the amount 11, the minimum number of coins needed is 3 (using two 5s and one 1).
+
+Complexity
+Time Complexity: O(n * m), where n is the number of coin denominations and m is the target amount.
+Space Complexity: O(m) for the dp array.
+This approach efficiently computes the minimum number of coins needed to make a given amount using dynamic programming.
