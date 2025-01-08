@@ -1,0 +1,9 @@
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation: none;
+    mix-blend-mode: normal;
+}
