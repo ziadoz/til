@@ -1,0 +1,7 @@
+Channel: https://www.youtube.com/feeds/videos.xml?channel_id=<channel-id>
+
+Playlist: https://www.youtube.com/feeds/videos.xml?playlist_id=<playlist-id>
+
+User: https://www.youtube.com/feeds/videos.xml?user=<user_id>
+
+Link: https://news.ycombinator.com/item?id=32192352
