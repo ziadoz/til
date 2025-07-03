@@ -1,0 +1,7 @@
+A simple way to dual boot that doesn't involve messing around with boot managers and master boot records:
+
+- Install Windows on SSD 1.
+- Disconnect SSD 1.
+- Install Linux on SSD 2.
+- Reconnect SSD 1.
+- Use BIOS boot device selector menu to switch (e.g. F8).
