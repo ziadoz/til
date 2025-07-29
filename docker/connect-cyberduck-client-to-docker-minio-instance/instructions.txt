@@ -1,0 +1,2 @@
+1. Download S3 profile for deprecated paths: https://profiles.cyberduck.io/S3%20(Deprecated%20path%20style%20requests).cyberduckprofile
+2. Use host: `localhost`, port: 9000, username: <username>, password: <password>

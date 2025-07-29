@@ -1,0 +1,28 @@
+services:
+  minio:
+    image: minio/minio:latest
+    restart: always
+    hostname: minio
+    ports:
+      - "9000:9000"
+      - "9001:9002"
+    environment:
+      MINIO_ROOT_USER: minio
+      MINIO_ROOT_PASSWORD: secretkey
+    volumes:
+      - ./local/path/to/certs:/root/.minio/certs # Generate local certificate using mkcert
+      - my-mino:/data
+    networks:
+      my-network:
+        ipv4_address: 172.28.1.5 # Fixed IP as Minio requires the SSL cert to include the container IP
+
+volumes:
+  my-minio:
+    driver: local
+
+networks:
+  my-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
