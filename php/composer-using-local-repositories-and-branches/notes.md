@@ -18,6 +18,8 @@ See: `composer_path.json`
 
 Prefix the branch name you want to use with `dev-`, so `my-branch` becomes `dev-my-branch`.
 
+If you want your branch to behave like specific version, you can also use the `as` keyword: `dev-my-branch as 13.x-dev`
+
 # Links
 
 [Install a Local Package with Composer](http://marekkalnik.tumblr.com/post/22929686367/composer-installing-package-from-local-git)
@@ -27,3 +29,5 @@ Prefix the branch name you want to use with `dev-`, so `my-branch` becomes `dev-
 [Composer Path Repositories](https://getcomposer.org/doc/05-repositories.md#path)
 
 [Installing a Local Composer Package in your PHP Project](https://aschmelyun.com/blog/installing-a-local-composer-package-in-your-php-project/)
+
+[Composer Version Aliases](https://getcomposer.org/doc/articles/aliases.md)
