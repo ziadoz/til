@@ -76,21 +76,28 @@ for topic_dir in topics:
 
     rows = []
     for entry in entries:
-        # Use the first file inside the entry dir as the tracked path for dates
-        files = sorted(f for f in entry.rglob("*") if f.is_file())
+        # Use the first file inside the entry dir as the tracked path for dates.
+        # gist.url is metadata and would skew dates to when it was backfilled.
+        files = sorted(
+            f for f in entry.rglob("*")
+            if f.is_file() and f.name != "gist.url"
+        )
         if not files:
             continue
         date = entry_date(files[0].relative_to(ROOT))
         title = entry_title(files[0].relative_to(ROOT))
         rel = entry.relative_to(ROOT)
-        rows.append((date, title, rel))
+        gist_file = entry / "gist.url"
+        gist = gist_file.read_text().strip() if gist_file.exists() else ""
+        rows.append((date, title, rel, gist))
         all_entries.append((date, title, rel, topic_dir.name))
 
     rows.sort(key=lambda r: r[0], reverse=True)
 
     lines = [f"## {topic_title(topic_dir.name)}\n"]
-    for date, title, rel in rows:
-        lines.append(f"- [{title}]({rel}/) — {date}")
+    for date, title, rel, gist in rows:
+        suffix = f" ([gist]({gist}))" if gist else ""
+        lines.append(f"- [{title}]({rel}/) — {date}{suffix}")
     topic_sections.append("\n".join(lines))
 
 total = len(all_entries)
