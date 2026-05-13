@@ -2,10 +2,11 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-234 entries across 18 topics.
+235 entries across 19 topics.
 
 ## Topics
 
+- [.Github](#.github) (1)
 - [AI Generated](#ai-generated) (2)
 - [Bash](#bash) (16)
 - [Database](#database) (10)
@@ -24,6 +25,10 @@
 - [Ruby](#ruby) (6)
 - [Webserver](#webserver) (5)
 - [Windows](#windows) (6)
+
+## .Github
+
+- [Update Readme.Yml](.github/workflows/) — 2026-05-13
 
 ## AI Generated
 
