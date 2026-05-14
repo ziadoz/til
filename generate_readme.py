@@ -14,7 +14,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 README = ROOT / "README.md"
-SKIP_DIRS = {".git"}
 SKIP_FILES = {"generate_readme.py", "README.md", ".gitignore"}
 
 
@@ -60,7 +59,7 @@ def topic_title(name):
 
 topics = sorted(
     d for d in ROOT.iterdir()
-    if d.is_dir() and d.name not in SKIP_DIRS
+    if d.is_dir() and not d.name.startswith(".")
 )
 
 all_entries = []
