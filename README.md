@@ -95,7 +95,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## Git
 
-- [Readme.Md](git/github-desktop-renamed-files-shown-as-deleted-and-added/) — 2026-05-27
+- [GitHub Desktop Shows Renamed Files as Deleted and Added](git/github-desktop-renamed-files-shown-as-deleted-and-added/) — 2026-05-27
 - [Git Obliterate - Remove files from entire Git repository history](git/git-obliterate-remove-files-from-entire-git-repository-history/) — 2024-05-24 ([gist](https://gist.github.com/ziadoz/fe69ebf358bbd128ba72f3a4eab240aa))
 - [Prevent Git Managing CSV Line Endings](git/prevent-git-managing-csv-line-endings/) — 2022-09-26 ([gist](https://gist.github.com/ziadoz/94cdf938ff5d6af8268b858dccda144c))
 - [GitHub - Get All Your PRs As JSON](git/github-get-all-your-prs-as-json/) — 2022-03-24 ([gist](https://gist.github.com/ziadoz/37b999970a3b579f7f61c6a9232c7736))
