@@ -25,9 +25,8 @@
 - [Webserver](#webserver) (5)
 - [Windows](#windows) (6)
 
----
-
-## Adding Entries
+<details>
+<summary>Adding Entries</summary>
 
 Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`. The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
 
@@ -36,6 +35,10 @@ til(topic): Title of the entry
 ```
 
 The date shown next to each entry is taken from the same commit. If no matching commit message is found, the script falls back to converting the directory name from kebab-case to title case.
+
+</details>
+
+---
 
 ## AI Generated
 
