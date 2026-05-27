@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-235 entries across 18 topics.
+236 entries across 18 topics.
 
 ## Topics
 
@@ -11,7 +11,7 @@
 - [Database](#database) (10)
 - [Docker](#docker) (9)
 - [Gaming](#gaming) (4)
-- [Git](#git) (7)
+- [Git](#git) (8)
 - [Go](#go) (5)
 - [HTML & CSS](#html-css) (12)
 - [JavaScript](#javascript) (19)
@@ -24,6 +24,18 @@
 - [Ruby](#ruby) (6)
 - [Webserver](#webserver) (5)
 - [Windows](#windows) (6)
+
+---
+
+## Adding Entries
+
+Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`. The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
+
+```
+til(topic): Title of the entry
+```
+
+The date shown next to each entry is taken from the same commit. If no matching commit message is found, the script falls back to converting the directory name from kebab-case to title case.
 
 ## AI Generated
 
@@ -83,6 +95,7 @@
 
 ## Git
 
+- [Readme.Md](git/github-desktop-renamed-files-shown-as-deleted-and-added/) — 2026-05-27
 - [Git Obliterate - Remove files from entire Git repository history](git/git-obliterate-remove-files-from-entire-git-repository-history/) — 2024-05-24 ([gist](https://gist.github.com/ziadoz/fe69ebf358bbd128ba72f3a4eab240aa))
 - [Prevent Git Managing CSV Line Endings](git/prevent-git-managing-csv-line-endings/) — 2022-09-26 ([gist](https://gist.github.com/ziadoz/94cdf938ff5d6af8268b858dccda144c))
 - [GitHub - Get All Your PRs As JSON](git/github-get-all-your-prs-as-json/) — 2022-03-24 ([gist](https://gist.github.com/ziadoz/37b999970a3b579f7f61c6a9232c7736))
@@ -138,7 +151,7 @@
 
 ## Laravel
 
-- [Debug_Db_Queries.Php](laravel/laravel-db-query-logging/) — 2026-05-27
+- [Logging Database and Eloquent Queries](laravel/laravel-db-query-logging/) — 2026-05-27
 - [Command.Php](laravel/find-and-fix-duplicate-statement-numbers/) — 2026-05-03
 - [Laravel 12.x - Many-to-Many Join Table Structure](laravel/laravel-12x-many-to-many-join-table-structure/) — 2026-02-03 ([gist](https://gist.github.com/ziadoz/dd11b6cc4fe65b8914739105cbb1d812))
 - [Laravel 12.x - Spatie Media User Avatars](laravel/laravel-12x-spatie-media-user-avatars/) — 2026-01-25 ([gist](https://gist.github.com/ziadoz/c38046aa4398022f048877620631b0e4))
