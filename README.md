@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-234 entries across 18 topics.
+235 entries across 18 topics.
 
 ## Topics
 
@@ -15,7 +15,7 @@
 - [Go](#go) (5)
 - [HTML & CSS](#html-css) (12)
 - [JavaScript](#javascript) (19)
-- [Laravel](#laravel) (38)
+- [Laravel](#laravel) (39)
 - [Linux](#linux) (11)
 - [Mac](#mac) (12)
 - [Misc](#misc) (8)
@@ -138,6 +138,7 @@
 
 ## Laravel
 
+- [Debug_Db_Queries.Php](laravel/laravel-db-query-logging/) — 2026-05-27
 - [Command.Php](laravel/find-and-fix-duplicate-statement-numbers/) — 2026-05-03
 - [Laravel 12.x - Many-to-Many Join Table Structure](laravel/laravel-12x-many-to-many-join-table-structure/) — 2026-02-03 ([gist](https://gist.github.com/ziadoz/dd11b6cc4fe65b8914739105cbb1d812))
 - [Laravel 12.x - Spatie Media User Avatars](laravel/laravel-12x-spatie-media-user-avatars/) — 2026-01-25 ([gist](https://gist.github.com/ziadoz/c38046aa4398022f048877620631b0e4))
