@@ -1,0 +1,12 @@
+# Build output
+dist/
+safari-export
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo

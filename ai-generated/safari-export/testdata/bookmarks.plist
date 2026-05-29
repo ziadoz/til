@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WebBookmarkType</key>
+	<string>WebBookmarkTypeList</string>
+	<key>Children</key>
+	<array>
+		<dict>
+			<key>WebBookmarkType</key>
+			<string>WebBookmarkTypeList</string>
+			<key>Title</key>
+			<string>BookmarksBar</string>
+			<key>Children</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>WebBookmarkType</key>
+			<string>WebBookmarkTypeList</string>
+			<key>Title</key>
+			<string>com.apple.ReadingList</string>
+			<key>Children</key>
+			<array>
+				<dict>
+					<key>WebBookmarkType</key>
+					<string>WebBookmarkTypeLeaf</string>
+					<key>URLString</key>
+					<string>https://example.com/article</string>
+					<key>URIDictionary</key>
+					<dict>
+						<key>title</key>
+						<string>Example Article</string>
+					</dict>
+					<key>ReadingList</key>
+					<dict>
+						<key>DateAdded</key>
+						<date>2026-05-24T21:55:18Z</date>
+					</dict>
+				</dict>
+				<dict>
+					<key>WebBookmarkType</key>
+					<string>WebBookmarkTypeLeaf</string>
+					<key>URLString</key>
+					<string>https://example.com/read-article</string>
+					<key>URIDictionary</key>
+					<dict>
+						<key>title</key>
+						<string>Read Article</string>
+					</dict>
+					<key>ReadingList</key>
+					<dict>
+						<key>DateAdded</key>
+						<date>2026-05-23T10:00:00Z</date>
+						<key>DateLastFetched</key>
+						<date>2026-05-23T12:00:00Z</date>
+					</dict>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>
