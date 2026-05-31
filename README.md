@@ -2,11 +2,11 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-239 entries across 18 topics.
+241 entries across 18 topics.
 
 ## Topics
 
-- [AI Generated](#ai-generated) (5)
+- [AI Generated](#ai-generated) (7)
 - [Bash](#bash) (16)
 - [Database](#database) (10)
 - [Docker](#docker) (9)
@@ -42,11 +42,13 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## AI Generated
 
-- [PHP Environment Variable Object Experiment](ai-generated/envobj/) — 2026-05-29
-- [Laravel Diagnostics Package Experiment](ai-generated/laravel-diagnostics/) — 2026-05-29
-- [Go Safari Tab and Reading List Exporter](ai-generated/safari-export/) — 2026-05-29
+- [PHP Safari Tab and Reading List Exporter](ai-generated/safari-export-php/) — 2026-05-31
+- [Python Safari Tab and Reading List Exporter](ai-generated/safari-export-python/) — 2026-05-31
+- [Go Safari Tab and Reading List Exporter](ai-generated/safari-export-go/) — 2026-05-29
 - [Bluesky cleanup - delete all posts, likes and reposts](ai-generated/bluesky-cleanup/) — 2026-01-23
 - [Mastodon cleanup - delete all posts, boosts and favourites](ai-generated/mastodon-cleanup/) — 2026-01-23
+- [.Ds_Store](ai-generated/envobj/) — 
+- [.Ds_Store](ai-generated/laravel-diagnostics/) — 
 
 ## Bash
 
