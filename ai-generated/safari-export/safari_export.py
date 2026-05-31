@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """Export Safari reading list, local tabs, and iCloud tabs to CSV."""
 
+import argparse
 import csv
 import plistlib
 import sqlite3
 import subprocess
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 BOOKMARKS_PLIST = Path.home() / "Library/Safari/Bookmarks.plist"
 CLOUD_TABS_DB = Path.home() / "Library/Containers/com.apple.Safari/Data/Library/Safari/CloudTabs.db"
-OUTPUT_FILE = Path.home() / "Desktop/safari_export.csv"
+DEFAULT_OUTPUT_DIR = Path.home() / "Desktop"
+OUTPUT_FILENAME = "safari_export.csv"
 
 FIELDS = ["source", "device", "title", "url", "date_added", "read"]
 
@@ -22,7 +24,6 @@ def apple_epoch_to_iso(ts):
         return ""
     if isinstance(ts, datetime):
         return ts.strftime("%Y-%m-%d %H:%M:%S")
-    from datetime import timedelta
     epoch = datetime(2001, 1, 1, tzinfo=timezone.utc)
     dt = epoch + timedelta(seconds=float(ts))
     return dt.strftime("%Y-%m-%d %H:%M:%S")
@@ -42,12 +43,12 @@ def get_reading_list():
                 return node
             for v in node.values():
                 result = find_node(v, title)
-                if result:
+                if result is not None:
                     return result
         elif isinstance(node, list):
             for item in node:
                 result = find_node(item, title)
-                if result:
+                if result is not None:
                     return result
         return None
 
@@ -76,12 +77,10 @@ def get_reading_list():
 def get_local_tabs():
     script = """
     tell application "Safari"
-        set output to {}
+        set output to ""
         repeat with w in windows
             repeat with t in tabs of w
-                set u to URL of t
-                set n to name of t
-                set end of output to n & "|||" & u
+                set output to output & (name of t) & "|||" & (URL of t) & linefeed
             end repeat
         end repeat
         return output
@@ -93,8 +92,7 @@ def get_local_tabs():
         return []
 
     rows = []
-    for line in result.stdout.strip().split(", "):
-        line = line.strip()
+    for line in result.stdout.strip().split("\n"):
         if "|||" not in line:
             continue
         title, url = line.split("|||", 1)
@@ -143,6 +141,19 @@ def get_icloud_tabs():
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        description="Export Safari reading list, local tabs, and iCloud tabs to CSV."
+    )
+    parser.add_argument(
+        "-o", "--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR,
+        help=f"folder to write {OUTPUT_FILENAME} into (default: ~/Desktop). Created if it doesn't exist.",
+    )
+    args = parser.parse_args()
+
+    output_dir = args.output_dir.expanduser()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / OUTPUT_FILENAME
+
     print("Exporting Safari data...")
 
     reading_list = get_reading_list()
@@ -156,12 +167,12 @@ def main():
 
     all_rows = reading_list + local_tabs + icloud_tabs
 
-    with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as f:
+    with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDS)
         writer.writeheader()
         writer.writerows(all_rows)
 
-    print(f"\nWritten {len(all_rows)} rows to {OUTPUT_FILE}")
+    print(f"\nWritten {len(all_rows)} rows to {output_file}")
 
 
 if __name__ == "__main__":
