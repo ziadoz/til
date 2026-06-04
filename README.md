@@ -2,14 +2,14 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-241 entries across 18 topics.
+242 entries across 18 topics.
 
 ## Topics
 
 - [AI Generated](#ai-generated) (7)
 - [Bash](#bash) (16)
 - [Database](#database) (10)
-- [Docker](#docker) (9)
+- [Docker](#docker) (10)
 - [Gaming](#gaming) (4)
 - [Git](#git) (8)
 - [Go](#go) (5)
@@ -44,11 +44,11 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 - [PHP Safari Tab and Reading List Exporter](ai-generated/safari-export-php/) — 2026-05-31
 - [Python Safari Tab and Reading List Exporter](ai-generated/safari-export-python/) — 2026-05-31
+- [PHP Environment Variable Object Experiment](ai-generated/envobj/) — 2026-05-29
+- [Laravel Diagnostics Package Experiment](ai-generated/laravel-diagnostics/) — 2026-05-29
 - [Go Safari Tab and Reading List Exporter](ai-generated/safari-export-go/) — 2026-05-29
 - [Bluesky cleanup - delete all posts, likes and reposts](ai-generated/bluesky-cleanup/) — 2026-01-23
 - [Mastodon cleanup - delete all posts, boosts and favourites](ai-generated/mastodon-cleanup/) — 2026-01-23
-- [.Ds_Store](ai-generated/envobj/) — 
-- [.Ds_Store](ai-generated/laravel-diagnostics/) — 
 
 ## Bash
 
@@ -84,6 +84,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## Docker
 
+- [Using the MySQL Client in an ARM Docker Image](docker/mysql-client-in-arm-docker-image/) — 2026-06-04
 - [Connect CyberDuck client to Docker Minio Instance](docker/connect-cyberduck-client-to-docker-minio-instance/) — 2025-07-29 ([gist](https://gist.github.com/ziadoz/1acc7bc7d5f9b5f71d8951f3d9fd7c04))
 - [Test PHP Projects Using Docker](docker/test-php-projects-using-docker/) — 2023-09-21 ([gist](https://gist.github.com/ziadoz/1ce2565ac4968ef1fc2acc0be9a1c06f))
 - [Miniflux Docker Compose](docker/miniflux-docker-compose/) — 2023-03-21 ([gist](https://gist.github.com/ziadoz/e25ce289bca824da189ebedede8f381a))
