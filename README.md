@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-242 entries across 18 topics.
+243 entries across 18 topics.
 
 ## Topics
 
@@ -14,7 +14,7 @@
 - [Git](#git) (8)
 - [Go](#go) (5)
 - [HTML & CSS](#html-css) (12)
-- [JavaScript](#javascript) (19)
+- [JavaScript](#javascript) (20)
 - [Laravel](#laravel) (39)
 - [Linux](#linux) (11)
 - [Mac](#mac) (12)
@@ -138,6 +138,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## JavaScript
 
+- [Auto-Initialise Bootstrap Tooltips with a MutationObserver](javascript/mutation-observer-bootstrap-tooltips/) — 2026-07-21
 - [JS Function Return](javascript/js-function-return/) — 2025-04-01 ([gist](https://gist.github.com/ziadoz/7b67a6b80a884f6b1d2985c226834990))
 - [JS Loops Example (for...in, for...of, forEach(), entries(), keys(), values())](javascript/js-loops-example-forin-forof-foreach-entries-keys-values/) — 2024-08-29 ([gist](https://gist.github.com/ziadoz/0a0d7e652014509eda35933d7a0f0393))
 - [JS - Get Hours, Minutes and Seconds from Date](javascript/js-get-hours-minutes-and-seconds-from-date/) — 2024-07-09 ([gist](https://gist.github.com/ziadoz/db2d22f76ec3658ce46e18d445f9792f))
