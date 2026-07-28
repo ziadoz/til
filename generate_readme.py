@@ -116,7 +116,11 @@ header = f"""\
 <details>
 <summary>Adding Entries</summary>
 
-Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`. The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
+Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`.
+
+To scaffold a new entry, run `python3 new.py` and follow the prompts: pick a topic (or add a new one) and enter a title. It creates the entry directory with a starter `README.md` and prints the matching commit message (also copying it to your clipboard).
+
+The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
 
 ```
 til(topic): Title of the entry
