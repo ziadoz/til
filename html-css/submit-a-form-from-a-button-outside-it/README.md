@@ -15,3 +15,14 @@ The `form` attribute is part of the HTML standard for [form-associated elements]
 This is handy when layout forces the controls apart, for example a sticky footer bar with a save button that submits a form higher up the page, or a modal whose action buttons sit in a separate footer element from the fields.
 
 You can also override the form's own settings from the button using the `formaction`, `formmethod`, `formenctype`, `formtarget`, and `formnovalidate` attributes, so a second button can post the same form to a different endpoint.
+
+```html
+<form id="myForm" action="/save" method="post">
+    <input name="title">
+</form>
+
+<button form="myForm">Save</button>
+<button form="myForm" formaction="/save-draft" formnovalidate>Save Draft</button>
+```
+
+Here the first button submits to `/save` as configured on the form, while the second reuses the same fields but posts to `/save-draft` and skips validation, all without a second `<form>`.
