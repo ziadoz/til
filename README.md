@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-244 entries across 18 topics.
+245 entries across 18 topics.
 
 ## Topics
 
@@ -13,7 +13,7 @@
 - [Gaming](#gaming) (4)
 - [Git](#git) (8)
 - [Go](#go) (5)
-- [HTML & CSS](#html-css) (13)
+- [HTML & CSS](#html-css) (14)
 - [JavaScript](#javascript) (20)
 - [Laravel](#laravel) (39)
 - [Linux](#linux) (11)
@@ -127,6 +127,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## HTML & CSS
 
+- [Image Lightbox With a Native Dialog and CSS Carousel](html-css/image-lightbox-with-a-native-dialog-and-css-carousel/) — 2026-08-07
 - [Submit a Form From a Button Outside It](html-css/submit-a-form-from-a-button-outside-it/) — 2026-08-06
 - [CSS View Transitions](html-css/css-view-transitions/) — 2025-01-08 ([gist](https://gist.github.com/ziadoz/fea721c3f999071b9633e30b320da8e9))
 - [Hide/Disable Select Options in Browsers (Safari Bug)](html-css/hidedisable-select-options-in-browsers-safari-bug/) — 2024-08-06 ([gist](https://gist.github.com/ziadoz/e8e33a8ac07d492044efd05b9d112c9a))
