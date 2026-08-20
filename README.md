@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-245 entries across 18 topics.
+246 entries across 18 topics.
 
 ## Topics
 
@@ -19,7 +19,7 @@
 - [Linux](#linux) (11)
 - [Mac](#mac) (12)
 - [Misc](#misc) (8)
-- [PHP](#php) (63)
+- [PHP](#php) (64)
 - [Python](#python) (1)
 - [Ruby](#ruby) (6)
 - [Webserver](#webserver) (5)
@@ -249,6 +249,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## PHP
 
+- [Download Forced English Subtitles from OpenSubtitles](php/download-forced-english-subtitles-from-opensubtitles/) — 2026-08-20
 - [Pest - Gherkin Formatted Test Names](php/pest-gherkin-formatted-test-names/) — 2025-12-11 ([gist](https://gist.github.com/ziadoz/70c46d63f6055324309cb31959b346cf))
 - [PHP Extension Versions](php/php-extension-versions/) — 2025-10-16 ([gist](https://gist.github.com/ziadoz/82c13417b83202979ecc945968ae41d5))
 - [PHP Read Only Env Var Object](php/php-read-only-env-var-object/) — 2025-09-24 ([gist](https://gist.github.com/ziadoz/fc56be76a81c4e63862efa36a71d263c))
