@@ -2,7 +2,7 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-242 entries across 18 topics.
+245 entries across 18 topics.
 
 ## Topics
 
@@ -13,8 +13,8 @@
 - [Gaming](#gaming) (4)
 - [Git](#git) (8)
 - [Go](#go) (5)
-- [HTML & CSS](#html-css) (12)
-- [JavaScript](#javascript) (19)
+- [HTML & CSS](#html-css) (14)
+- [JavaScript](#javascript) (20)
 - [Laravel](#laravel) (39)
 - [Linux](#linux) (11)
 - [Mac](#mac) (12)
@@ -28,7 +28,11 @@
 <details>
 <summary>Adding Entries</summary>
 
-Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`. The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
+Each entry lives in a subdirectory under its topic (e.g. `git/my-entry/README.md`). This README is generated automatically by `generate_readme.py`.
+
+To scaffold a new entry, run `python3 new.py` and follow the prompts: pick a topic (or add a new one) and enter a title. It creates the entry directory with a starter `README.md` and prints the matching commit message (also copying it to your clipboard).
+
+The title for each entry comes from the git commit message that first added a file in that directory, so commit messages must follow this format:
 
 ```
 til(topic): Title of the entry
@@ -123,6 +127,8 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## HTML & CSS
 
+- [Image Lightbox With a Native Dialog and CSS Carousel](html-css/image-lightbox-with-a-native-dialog-and-css-carousel/) — 2026-08-07
+- [Submit a Form From a Button Outside It](html-css/submit-a-form-from-a-button-outside-it/) — 2026-08-06
 - [CSS View Transitions](html-css/css-view-transitions/) — 2025-01-08 ([gist](https://gist.github.com/ziadoz/fea721c3f999071b9633e30b320da8e9))
 - [Hide/Disable Select Options in Browsers (Safari Bug)](html-css/hidedisable-select-options-in-browsers-safari-bug/) — 2024-08-06 ([gist](https://gist.github.com/ziadoz/e8e33a8ac07d492044efd05b9d112c9a))
 - [DOM Properties](html-css/dom-properties/) — 2024-04-24 ([gist](https://gist.github.com/ziadoz/1feb0ab209527744543ffec9e02ec50c))
@@ -138,6 +144,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## JavaScript
 
+- [Auto-Initialise Bootstrap Tooltips with a MutationObserver](javascript/mutation-observer-bootstrap-tooltips/) — 2026-07-21
 - [JS Function Return](javascript/js-function-return/) — 2025-04-01 ([gist](https://gist.github.com/ziadoz/7b67a6b80a884f6b1d2985c226834990))
 - [JS Loops Example (for...in, for...of, forEach(), entries(), keys(), values())](javascript/js-loops-example-forin-forof-foreach-entries-keys-values/) — 2024-08-29 ([gist](https://gist.github.com/ziadoz/0a0d7e652014509eda35933d7a0f0393))
 - [JS - Get Hours, Minutes and Seconds from Date](javascript/js-get-hours-minutes-and-seconds-from-date/) — 2024-07-09 ([gist](https://gist.github.com/ziadoz/db2d22f76ec3658ce46e18d445f9792f))

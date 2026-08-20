@@ -1,0 +1,213 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #1a1a1a;
+  background: #fafafa;
+}
+
+.page-header {
+  padding: 2rem 1.5rem 0;
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.page-header h1 {
+  margin: 0 0 0.25rem;
+}
+
+.page-header p {
+  margin: 0;
+  color: #555;
+}
+
+/* Thumbnail grid */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+.thumb {
+  padding: 0;
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #e5e5e5;
+  aspect-ratio: 4 / 3;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.thumb:hover,
+.thumb:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 0.2);
+  outline: none;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Lightbox dialog + backdrop */
+
+.lightbox {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding: 0;
+  border: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+.lightbox::backdrop {
+  background: rgb(0 0 0 / 0.8);
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: #fff;
+  background: rgb(0 0 0 / 0.4);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.lightbox__close:hover,
+.lightbox__close:focus-visible {
+  background: rgb(0 0 0 / 0.7);
+  outline: none;
+}
+
+/* CSS carousel */
+
+.carousel {
+  anchor-name: --carousel;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-marker-group: after;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel__item {
+  flex: 0 0 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  scroll-snap-align: center;
+}
+
+.carousel__item img {
+  max-width: 100%;
+  max-height: 90dvh;
+  object-fit: contain;
+  border-radius: 0.25rem;
+}
+
+/* Prev / next buttons (Chromium 135+) */
+
+.carousel::scroll-button(*) {
+  position: absolute;
+  position-anchor: --carousel;
+  top: anchor(center);
+  translate: 0 -50%;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  line-height: 1;
+  color: #fff;
+  background: rgb(0 0 0 / 0.4);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+.carousel::scroll-button(*):hover,
+.carousel::scroll-button(*):focus-visible {
+  background: rgb(0 0 0 / 0.7);
+  outline: none;
+}
+
+.carousel::scroll-button(*):disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.carousel::scroll-button(left) {
+  content: "\2039" / "Previous image";
+  left: calc(anchor(left) + 1rem);
+}
+
+.carousel::scroll-button(right) {
+  content: "\203A" / "Next image";
+  right: calc(anchor(right) + 1rem);
+}
+
+/* Dot markers (Chromium 135+) */
+
+.carousel::scroll-marker-group {
+  position: absolute;
+  position-anchor: --carousel;
+  top: calc(anchor(bottom) - 2.5rem);
+  justify-self: anchor-center;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.carousel__item::scroll-marker {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.carousel__item::scroll-marker:hover {
+  background: rgb(255 255 255 / 0.5);
+}
+
+.carousel__item::scroll-marker:target-current {
+  background: #fff;
+}
