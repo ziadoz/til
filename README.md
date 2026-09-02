@@ -2,13 +2,13 @@
 
 > Things I've picked up, figured out, or found useful. Inspired by [simonw/til](https://github.com/simonw/til).
 
-246 entries across 18 topics.
+247 entries across 18 topics.
 
 ## Topics
 
 - [AI Generated](#ai-generated) (7)
 - [Bash](#bash) (16)
-- [Database](#database) (10)
+- [Database](#database) (11)
 - [Docker](#docker) (10)
 - [Gaming](#gaming) (4)
 - [Git](#git) (8)
@@ -48,11 +48,11 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 - [PHP Safari Tab and Reading List Exporter](ai-generated/safari-export-php/) — 2026-05-31
 - [Python Safari Tab and Reading List Exporter](ai-generated/safari-export-python/) — 2026-05-31
-- [PHP Environment Variable Object Experiment](ai-generated/envobj/) — 2026-05-29
-- [Laravel Diagnostics Package Experiment](ai-generated/laravel-diagnostics/) — 2026-05-29
 - [Go Safari Tab and Reading List Exporter](ai-generated/safari-export-go/) — 2026-05-29
 - [Bluesky cleanup - delete all posts, likes and reposts](ai-generated/bluesky-cleanup/) — 2026-01-23
 - [Mastodon cleanup - delete all posts, boosts and favourites](ai-generated/mastodon-cleanup/) — 2026-01-23
+- [.Ds_Store](ai-generated/envobj/) — 
+- [.Ds_Store](ai-generated/laravel-diagnostics/) — 
 
 ## Bash
 
@@ -75,6 +75,7 @@ The date shown next to each entry is taken from the same commit. If no matching 
 
 ## Database
 
+- [Querying and fixing zero dates in MySQL](database/querying-and-fixing-zero-dates-in-mysql/) — 2026-09-02
 - [Table Timestamp Column Ordering - Put timestamps after id instead of at the end of the table](database/table-timestamp-column-ordering-put-timestamps-after-id-instead-of-at-the-end-of/) — 2024-10-24 ([gist](https://gist.github.com/ziadoz/77a6ee8b25df9ecb126e60485b116794))
 - [Postgres 17 Playground](database/postgres-17-playground/) — 2024-10-02 ([gist](https://gist.github.com/ziadoz/10f39759e8178d4db6b751027951abec))
 - [PGLoader - Importing MySQL into Postgres](database/pgloader-importing-mysql-into-postgres/) — 2024-09-26 ([gist](https://gist.github.com/ziadoz/27a130887b30dcdadb357b4cbe886d64))
